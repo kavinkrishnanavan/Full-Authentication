@@ -16,7 +16,7 @@ def home_page():
 
 def main():
     # Use query param 'page' to simulate routing
-    query_params = st.get_query_params()
+    query_params = st.query_params
     page = query_params.get("page", ["home"])[0]
 
     if page == "login":
