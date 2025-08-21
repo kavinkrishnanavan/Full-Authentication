@@ -24,7 +24,8 @@ def main():
     else:
         if not st.user.is_logged_in:
             # Redirect to login page if not logged in
-            st.set_query_params(page="login")
+            st.experimental_set_query_params(page="login")
+
             st.rerun()
         else:
             home_page()
